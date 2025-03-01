@@ -2,6 +2,7 @@ import express, { Router } from 'express';
 import cors from 'cors';
 import connectDB from './config/db';
 import cookieParser from 'cookie-parser';  
+import testimonialRoutes from './routes/testimonial';
 
 const app= express()
 
@@ -15,9 +16,43 @@ app.use(cors(
 app.use(cookieParser()); // Use cookie-parser to handle cookies
 connectDB()
 // // routes
-
+// Routes
+app.use('/api/testimonials', testimonialRoutes);
 
 // // middleware
 
 
 export default app
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import express from 'express';
+// import cors from 'cors';
+// import dotenv from 'dotenv';
+// import connectDB from './config/db';
+// import testimonialRoutes from './routes/testimonial';
+
+// dotenv.config();
+
+// export const app = express();
+
+// // Middleware
+// app.use(cors());
+// app.use(express.json());
+
+// // Connect to MongoDB
+// connectDB();
+
+// // Routes
+// app.use('/api/testimonials', testimonialRoutes);
+

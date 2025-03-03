@@ -70,6 +70,7 @@ const getTestimonial = (req, res) => __awaiter(void 0, void 0, void 0, function*
         const { page = 1, limit = 9, // Set default limit to 9 per page
         search = "", travelType, accommodations, travelTag, language, destination, rating, duration, sort = "dateOfTravel", // Default sort by "dateOfTravel"
          } = req.query;
+        console.log(req.query);
         let query = {};
         // Filtering based on query params
         if (travelType)

@@ -9,7 +9,9 @@ const app= express()
 app.use(express.json())
 app.use(cors(
     {
-        origin: 'http://localhost:5173', // Frontend URL
+        origin: ['http://localhost:5173','https://testimonialfrontend.vercel.app' ], 
+       
+        
         credentials: true, // Allow cookies to be sent
     }
 ))
@@ -30,29 +32,4 @@ export default app
 
 
 
-
-
-
-
-
-
-// import express from 'express';
-// import cors from 'cors';
-// import dotenv from 'dotenv';
-// import connectDB from './config/db';
-// import testimonialRoutes from './routes/testimonial';
-
-// dotenv.config();
-
-// export const app = express();
-
-// // Middleware
-// app.use(cors());
-// app.use(express.json());
-
-// // Connect to MongoDB
-// connectDB();
-
-// // Routes
-// app.use('/api/testimonials', testimonialRoutes);
 

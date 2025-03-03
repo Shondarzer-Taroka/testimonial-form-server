@@ -1,0 +1,23 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "src/index.ts",
+        "use": "@vercel/node",
+        "config": { "maxLambdaSize": "50mb" }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "/src/routes/$1.js"
+      }
+    ],
+    "env": {
+      "DB_URI": "mongodb+srv://superassistant:rz8UFgeO0wwSvDW9@cluster0.gehte.mongodb.net/task-manager?retryWrites=true&w=majority&appName=Cluster0",
+      "CLOUDINARY_CLOUD_NAME": "dw72swggv",
+      "CLOUDINARY_API_KEY":"918713179873163",
+       "CLOUDINARY_API_SECRET":"AhTBD7TTP8qiKqzPiC1vmYLxCVQ"
+    }
+  }
+  
